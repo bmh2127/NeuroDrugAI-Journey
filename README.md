@@ -60,4 +60,4 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 Feel free to connect with me if you're on a similar journey or working at the intersection of neuroscience, AI, and drug discovery.
 
 ---
-*Last updated: [Current Date]*
+*Last updated: 04-03-2025*
