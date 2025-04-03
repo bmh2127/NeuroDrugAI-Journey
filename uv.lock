@@ -234,6 +234,18 @@ css = [
 ]
 
 [[package]]
+name = "cattrs"
+version = "24.1.3"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "attrs" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/29/7b/da4aa2f95afb2f28010453d03d6eedf018f9e085bd001f039e15731aba89/cattrs-24.1.3.tar.gz", hash = "sha256:981a6ef05875b5bb0c7fb68885546186d306f10f0f6718fe9b96c226e68821ff", size = 426684 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/3c/ee/d68a3de23867a9156bab7e0a22fb9a0305067ee639032a22982cf7f725e7/cattrs-24.1.3-py3-none-any.whl", hash = "sha256:adf957dddd26840f27ffbd060a6c4dd3b2192c5b7c2c0525ef1bd8131d8a83f5", size = 66462 },
+]
+
+[[package]]
 name = "certifi"
 version = "2025.1.31"
 source = { registry = "https://pypi.org/simple" }
@@ -308,6 +320,21 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/cd/e5/131d2fb1b0dddafc37be4f3a2fa79aa4c037368be9423061dccadfd90091/charset_normalizer-3.4.1-cp313-cp313-win32.whl", hash = "sha256:eb8178fe3dba6450a3e024e95ac49ed3400e506fd4e9e5c32d30adda88cbd407", size = 95391 },
     { url = "https://files.pythonhosted.org/packages/27/f2/4f9a69cc7712b9b5ad8fdb87039fd89abba997ad5cbe690d1835d40405b0/charset_normalizer-3.4.1-cp313-cp313-win_amd64.whl", hash = "sha256:b1ac5992a838106edb89654e0aebfc24f5848ae2547d22c2c3f66454daa11971", size = 102702 },
     { url = "https://files.pythonhosted.org/packages/0e/f6/65ecc6878a89bb1c23a086ea335ad4bf21a588990c3f535a227b9eea9108/charset_normalizer-3.4.1-py3-none-any.whl", hash = "sha256:d98b1668f06378c6dbefec3b92299716b931cd4e6061f3c875a71ced1780ab85", size = 49767 },
+]
+
+[[package]]
+name = "chembl-webresource-client"
+version = "0.10.9"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "easydict" },
+    { name = "requests" },
+    { name = "requests-cache" },
+    { name = "urllib3" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/71/f0/a392e80361645d0dea1a228ff131b43a69209715b0b583832d9bd2bdd4ac/chembl-webresource-client-0.10.9.tar.gz", hash = "sha256:d49c7db7d40d19289f0f950557d0cf133fddef56c78a5873ed922a3d5816cc20", size = 46390 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/c2/7a/81dd5eb6d6166f733c02aeff6eff207ee3cd077872e6a20da925044c3d59/chembl_webresource_client-0.10.9-py3-none-any.whl", hash = "sha256:99101cad1ad178c5a0d7d74d70923c7997e9e63ec0361c247c6252dc29e524b5", size = 55201 },
 ]
 
 [[package]]
@@ -450,6 +477,15 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/0f/d5/c66da9b79e5bdb124974bfe172b4daf3c984ebd9c2a06e2b8a4dc7331c72/defusedxml-0.7.1.tar.gz", hash = "sha256:1bb3032db185915b62d7c6209c5a8792be6a32ab2fedacc84e01b52c51aa3e69", size = 75520 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/07/6c/aa3f2f849e01cb6a001cd8554a88d4c77c5c1a31c95bdf1cf9301e6d9ef4/defusedxml-0.7.1-py2.py3-none-any.whl", hash = "sha256:a352e7e428770286cc899e2542b6cdaedb2b4953ff269a210103ec58f6198a61", size = 25604 },
+]
+
+[[package]]
+name = "easydict"
+version = "1.13"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/24/9f/d18d6b5e19244788a6d09c14a8406376b4f4bfcc008e6d17a4f4c15362e8/easydict-1.13.tar.gz", hash = "sha256:b1135dedbc41c8010e2bc1f77ec9744c7faa42bce1a1c87416791449d6c87780", size = 6809 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/05/ec/fa6963f1198172c2b75c9ab6ecefb3045991f92f75f5eb41b6621b198123/easydict-1.13-py3-none-any.whl", hash = "sha256:6b787daf4dcaf6377b4ad9403a5cee5a86adbc0ca9a5bcf5410e9902002aeac2", size = 6804 },
 ]
 
 [[package]]
@@ -1554,6 +1590,7 @@ name = "neurodrugai-journey"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "chembl-webresource-client" },
     { name = "deepchem" },
     { name = "ipykernel" },
     { name = "jax" },
@@ -1573,6 +1610,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
+    { name = "chembl-webresource-client", specifier = ">=0.10.9" },
     { name = "deepchem", specifier = ">=2.8.0" },
     { name = "ipykernel", specifier = ">=6.29.5" },
     { name = "jax", specifier = ">=0.5.3" },
@@ -2360,6 +2398,23 @@ wheels = [
 ]
 
 [[package]]
+name = "requests-cache"
+version = "1.2.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "attrs" },
+    { name = "cattrs" },
+    { name = "platformdirs" },
+    { name = "requests" },
+    { name = "url-normalize" },
+    { name = "urllib3" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/1a/be/7b2a95a9e7a7c3e774e43d067c51244e61dea8b120ae2deff7089a93fb2b/requests_cache-1.2.1.tar.gz", hash = "sha256:68abc986fdc5b8d0911318fbb5f7c80eebcd4d01bfacc6685ecf8876052511d1", size = 3018209 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/4e/2e/8f4051119f460cfc786aa91f212165bb6e643283b533db572d7b33952bd2/requests_cache-1.2.1-py3-none-any.whl", hash = "sha256:1285151cddf5331067baa82598afe2d47c7495a1334bfe7a7d329b43e9fd3603", size = 61425 },
+]
+
+[[package]]
 name = "rfc3339-validator"
 version = "0.1.4"
 source = { registry = "https://pypi.org/simple" }
@@ -2928,6 +2983,18 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/31/c7/0336f2bd0bcbada6ccef7aaa25e443c118a704f828a0620c6fa0207c1b64/uri-template-1.3.0.tar.gz", hash = "sha256:0e00f8eb65e18c7de20d595a14336e9f337ead580c70934141624b6d1ffdacc7", size = 21678 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/e7/00/3fca040d7cf8a32776d3d81a00c8ee7457e00f80c649f1e4a863c8321ae9/uri_template-1.3.0-py3-none-any.whl", hash = "sha256:a44a133ea12d44a0c0f06d7d42a52d71282e77e2f937d8abd5655b8d56fc1363", size = 11140 },
+]
+
+[[package]]
+name = "url-normalize"
+version = "2.2.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "idna" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/1c/94/d79b960d66b933492f7dfbec8db799fa7033e7fbc98090f46fa581ca3a94/url_normalize-2.2.0.tar.gz", hash = "sha256:0f0b7cc95a95d2d9b0c9a51d47a326559bc05bd1558accdada21bb0c9504de85", size = 18201 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/f9/ce/73b35517cf49836ed8c7ca74c7da7808feca367788986f38e5e63f93e6cf/url_normalize-2.2.0-py3-none-any.whl", hash = "sha256:3fe387b62f5b66db94304bc703bf6d34de52aaa9590d4d1f1bbdf305a1430064", size = 14234 },
 ]
 
 [[package]]
