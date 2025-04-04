@@ -20,3 +20,6 @@ rag-system/documents/
 
 # ECFP plots
 ecfp_plots/
+
+# File mapping
+file_mapping.json
