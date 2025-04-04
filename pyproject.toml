@@ -12,6 +12,7 @@ dependencies = [
     "jupyter>=1.1.1",
     "lightning>=2.5.1",
     "matplotlib>=3.10.1",
+    "openai>=1.70.0",
     "optax>=0.2.4",
     "python-dotenv>=1.1.0",
     "rdkit>=2024.9.6",

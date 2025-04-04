@@ -11,3 +11,12 @@ wheels/
 .env
 
 .cursorrules
+
+# Pdf files
+*.pdf
+
+# RAG system
+rag-system/documents/
+
+# ECFP plots
+ecfp_plots/
