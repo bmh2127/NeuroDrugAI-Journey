@@ -1,0 +1,92 @@
+# Graph Convolution Learning Notes
+*A running collection of Q&A about graph convolutions for small molecule discovery*
+
+## Background
+This notepad records questions and answers about graph convolutional networks (GCNs) and related techniques as they apply to small molecule discovery and drug design, with particular focus on CNS-active compounds.
+
+## Protocol Structure
+Each entry follows this format:
+
+---
+### Question: [Date: YYYY-MM-DD]
+[The original question asked]
+
+### Answer:
+[The comprehensive answer]
+
+### Key Insights:
+- [Bullet points of critical takeaways]
+- [Connections to neuroscience when applicable]
+
+### Code Example (if applicable):
+```python
+# Example implementation
+```
+
+### Learning Note Reference:
+[Link to detailed learning note in learning-notes directory]
+
+## Recent Entries
+
+### Question: [2024-04-04]
+If two nodes are connected, does that mean they combine to pass information to the next layer?
+
+### Answer:
+See detailed answer in learning-notes/graph_node_information_flow.md
+
+### Key Insights:
+- Connected nodes engage in "message passing" rather than simple combination
+- Each node sends messages to its neighbors and receives messages from them
+- Each node updates its state based on aggregated messages
+- This process is fundamentally different from CNN's fixed convolutional patterns
+- Message passing is particularly well-suited for molecular representation
+
+### Learning Note Reference:
+learning-notes/graph_node_information_flow.md
+
+### Question: [2024-04-04]
+"Graph convolutions are similar, but they operate on a graph. They begin with a data vector for each node of the graph (for example, the chemical properties of the atom that node represents). Convolutional and pooling layers combine information from connected nodes (for example, atoms that are bonded to each other) to produce a new data vector for each node." Are the nodes of the graph analogous to the input neurons of a CNN?
+
+### Answer:
+See detailed answer in learning-notes/graph_nodes_cnn_neurons.md
+
+### Key Insights:
+- While graph nodes and CNN input neurons both serve as entry points for data, they differ fundamentally in structure and flexibility
+- Graph nodes can represent more complex initial features than CNN neurons
+- The irregular structure of graphs better matches molecular topology
+- Graph neural networks can handle variable-sized inputs, unlike CNNs
+- Both architectures ultimately build hierarchical representations, but through different mechanisms
+
+### Learning Note Reference:
+learning-notes/graph_nodes_cnn_neurons.md
+
+### Question: [2024-04-04]
+Why are convolutional layers often designed to alternate with pooling layers that perform some operation such as max or min over local regions?
+
+### Answer:
+See detailed answer in learning-notes/cnn_pooling_layers.md
+
+### Key Insights:
+- Pooling layers serve multiple crucial functions in CNNs
+- They enable efficient processing of large inputs
+- Help create robust, translation-invariant features
+- Support hierarchical feature learning
+- Reduce overfitting and computational complexity
+
+### Learning Note Reference:
+learning-notes/cnn_pooling_layers.md
+
+### Question: [2024-04-04]
+Consider a standard convolutional neural network (CNN) of the sort commonly used to process images. The input is a grid of pixels. There is a vector of data values for each pixel, for example the red, green, and blue color channels. The data passes through a series of convolutional layers. Each layer combines the data from a pixel and its neighbors to produce a new data vector for the pixel. Early layers detect small scale local patterns, while later layers detect larger, more abstract patterns. Often the convolutional layers alternate with pooling layers that perform some operation such as max or min over local regions. Why is it that early layers can be considered as detecting things locally and the later layers detect things more globally?
+
+### Answer:
+See detailed answer in learning-notes/cnn_local_global_features.md
+
+### Key Insights:
+- Hierarchical processing enables complex feature detection
+- Each layer builds on previous abstractions
+- Similar principles apply to both image and molecular data
+- Network architecture mirrors biological information processing
+
+### Learning Note Reference:
+learning-notes/cnn_local_global_features.md 

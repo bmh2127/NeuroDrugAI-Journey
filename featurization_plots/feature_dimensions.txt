@@ -1,0 +1,6 @@
+Feature Dimensions:
+Coulomb Matrix: (22, 22)
+ConvMol Features: (11, 75)
+Weave Features: (11, 75)
+GraphConv Node Features: (11, 30)
+GraphConv Edge Features: <class 'NoneType'>
